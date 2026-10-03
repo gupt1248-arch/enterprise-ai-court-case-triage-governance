@@ -1,0 +1,9 @@
+risk_id,risk,likelihood,impact,mitigation,status
+R-01,PII leakage to model logs or dashboard,High,Critical,"Redaction before modeling, raw text exclusion from outputs, audit-log hash only",Open for production validation
+R-02,Wrong case routing delays urgent/public-safety matter,Medium,Critical,Public-safety keyword escalation and mandatory human review,Mitigated in prototype
+R-03,Model overconfidence on rare categories,Medium,High,"Macro F1 monitoring, confidence thresholds, shadow testing",Mitigated in prototype
+R-04,Unauthorized access to restricted case records,Medium,Critical,"RBAC, SSO/MFA, least privilege, access recertification",Production requirement
+R-05,Bias or geographic performance drift,Medium,High,"County-level monitoring, error slicing, periodic model review",Production requirement
+R-06,Use beyond approved purpose,Medium,Critical,Explicit no-outcome/no-sentencing/no-legal-advice scope restrictions,Mitigated in documentation
+R-07,Inadequate audit trail for reviewer overrides,Low,High,Structured audit log with reviewer decisions and override reason,Implemented sample
+R-08,External model/provider data egress,Low,Critical,Local modeling in prototype; production requires approved provider and DPA,Mitigated in prototype
